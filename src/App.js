@@ -10,15 +10,15 @@ import Navbar from "./Components/Navbar/Navbar";
 function App() {
     return (
         <BrowserRouter>
-            <Navbar />
-                <div>
-                    <Routes>
-                        <Route path='/' element={<Main/>}/>
-                        <Route path='/' element={<Main/>}/>
-                        <Route path='/decoderVIN' element={<DecoderVIN/>}/>
-                        <Route path='/list' element={<List/>}/>
-                    </Routes>
-                </div>
+            <Navbar/>
+            <div>
+                <Routes>
+                    <Route path='/' element={<Main/>}/>
+                    <Route path='/' element={<Main/>}/>
+                    <Route path='/decoderVIN' element={<DecoderVIN/>}/>
+                    <Route path='/list' element={<List/>}/>
+                </Routes>
+            </div>
         </BrowserRouter>
     );
 }

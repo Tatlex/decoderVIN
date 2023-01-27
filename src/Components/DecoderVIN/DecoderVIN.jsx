@@ -1,5 +1,6 @@
 import classes from "./DecoderVIN.module.css";
 import $ from 'jquery';
+
 window.$ = $;
 
 function DecoderVIN() {
