@@ -1,4 +1,12 @@
 body {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F2.bp.blogspot.com%2F-xEI47QUqTWE%2FTzbhcY0AJII%2FAAAAAAAAA8w%2Fmun6pODtMrU%2Fs1600%2F303.Jpg&f=1&nofb=1&ipt=0a41fe626139b493afa723907c43b2f6c0252902de0abd03bca8dfb38673f329&ipo=images");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
