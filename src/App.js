@@ -1,6 +1,6 @@
 import React from "react";
-import Main from "./Components/Main/Main";
 import List from "./Components/List/List";
+import Variable from "./Components/Variable/Variable";
 import DecoderVIN from "./Components/DecoderVIN/DecoderVIN";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
@@ -13,10 +13,9 @@ function App() {
             <Navbar/>
             <div>
                 <Routes>
-                    <Route path='/' element={<Main/>}/>
-                    <Route path='/' element={<Main/>}/>
-                    <Route path='/decoderVIN' element={<DecoderVIN/>}/>
-                    <Route path='/list' element={<List/>}/>
+                    <Route path='/' element={<DecoderVIN/>}/>
+                    <Route path='/variables' element={<List/>}/>
+                    <Route path='/variables/:id' element={<Variable/>}/>
                 </Routes>
             </div>
         </BrowserRouter>
