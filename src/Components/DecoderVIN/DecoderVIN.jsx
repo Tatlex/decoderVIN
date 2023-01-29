@@ -1,18 +1,19 @@
 import classes from "./DecoderVIN.module.css";
-import {useState} from "react";
+import React, {useState} from "react";
 
 function DecoderVIN() {
     const [vin, setVin] = useState("");
     const [vehicleData, setVehicleData] = useState();
     const [history, setHistory] = useState([]);
+    const [err, setErr] = useState("");
 
     const onClick = async () => {
         let illegalChar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
         if (vin.length !== 17 || illegalChar.test(vin) === true) {
-            alert("Not valid input");
+            const err = returnMessageError();
+            setErr(err);
             return 0;
         }
-
         const res = await fetch(
             `https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/${vin}?format=json`
         );
@@ -26,6 +27,10 @@ function DecoderVIN() {
         const vehicleData = getVehicleData(result);
         setVehicleData(vehicleData);
     };
+
+    const returnMessageError = (data) => {
+        return "Invalid input";
+    }
 
     const getVehicleData = (data) => {
         if (!data) throw new Error("no vehicle data");
@@ -49,6 +54,7 @@ function DecoderVIN() {
                     <input type="text" placeholder="Input VIN code" value={vin} onChange={(e) => setVin(e.target.value)}
                     />
                 </div>
+                <div><span>{err}</span></div>
                 <div>
                     <button type="button" onClick={onClick}>Submit</button>
                 </div>
@@ -56,11 +62,8 @@ function DecoderVIN() {
             <div className={classes.historyInfo}>
                 <ol>
                     {history.map(({vin, time}) => (
-                        <li
-                            key={`${vin}-${time.valueOf()}`}
-                            style={{cursor: "pointer", color: "#0e0e53"}}
-                            onClick={() => setVin(vin)}
-                        >
+                        <li key={`${vin}-${time.valueOf()}`} style={{cursor: "pointer", color: "#0e0e53"}}
+                            onClick={() => setVin(vin)}>
                             {vin} at {time.toLocaleString()}
                         </li>
                     ))}
