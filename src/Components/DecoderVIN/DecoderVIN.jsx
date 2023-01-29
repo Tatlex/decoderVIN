@@ -5,19 +5,25 @@ function DecoderVIN() {
     const [vin, setVin] = useState("");
     const [vehicleData, setVehicleData] = useState();
     const [history, setHistory] = useState([]);
-    const [err, setErr] = useState("");
+    const [message, setMessage] = useState("");
 
-    const onClick = async () => {
+    const onChange = (e) => {
+        setMessage("");
+        setVin(e.target.value);
+    };
+
+    const onSubmit = async (e) => {
+        e.preventDefault();
         let illegalChar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-        if (vin.length !== 17 || illegalChar.test(vin) === true) {
-            const err = returnMessageError();
-            setErr(err);
-            return 0;
+        if (vin.length !== 17 || illegalChar.test(vin)) {
+            setMessage("Invalid input");
+            return;
         }
         const res = await fetch(
             `https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/${vin}?format=json`
         );
         const result = await res.json();
+        setMessage(result.Message);
 
         setHistory((current) => [
             {vin, time: new Date()},
@@ -27,10 +33,6 @@ function DecoderVIN() {
         const vehicleData = getVehicleData(result);
         setVehicleData(vehicleData);
     };
-
-    const returnMessageError = (data) => {
-        return "Invalid input";
-    }
 
     const getVehicleData = (data) => {
         if (!data) throw new Error("no vehicle data");
@@ -46,24 +48,26 @@ function DecoderVIN() {
             ""
         );
 
-
     return (
-        <div className={classes.decoderContainer}>
+        <form className={classes.decoderContainer} onSubmit={onSubmit}>
             <div className={classes.sendInfo}>
                 <div className={classes.inputArea}>
-                    <input type="text" placeholder="Input VIN code" value={vin} onChange={(e) => setVin(e.target.value)}
+                    <input type="text" placeholder="Input VIN code" value={vin} onChange={onChange}
                     />
+                    <div style={{color: "red"}}>{message}</div>
                 </div>
-                <div><span>{err}</span></div>
                 <div>
-                    <button type="button" onClick={onClick}>Submit</button>
+                    <button type="submit">Submit</button>
                 </div>
             </div>
             <div className={classes.historyInfo}>
                 <ol>
                     {history.map(({vin, time}) => (
-                        <li key={`${vin}-${time.valueOf()}`} style={{cursor: "pointer", color: "#0e0e53"}}
-                            onClick={() => setVin(vin)}>
+                        <li
+                            key={`${vin}-${time.valueOf()}`}
+                            style={{cursor: "pointer", color: "#0e0e53"}}
+                            onClick={() => setVin(vin)}
+                        >
                             {vin} at {time.toLocaleString()}
                         </li>
                     ))}
@@ -77,7 +81,7 @@ function DecoderVIN() {
             value={vehicleData && getVehicleDisplay(vehicleData)}
         ></textarea>
             </div>
-        </div>
+        </form>
     );
 }
 
