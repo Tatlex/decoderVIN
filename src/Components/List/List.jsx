@@ -15,11 +15,11 @@ function VariablesList() {
 
   return (
     <div className={classes.decoderContainer}>
-      <ul style={{ color: "indigo" }}>
+      <ul style={{ color: "#0e0e53" }}>
         {variables.map((variable) => (
           <li key={variable.ID}>
             <h3>
-              <Link to={`/variables/${variable.ID}`}>{variable.Name}</Link>
+              <Link style={{ color: "black" }} to={`/variables/${variable.ID}`}>{variable.Name}</Link>
             </h3>
             <p dangerouslySetInnerHTML={{ __html: variable.Description }}></p>
           </li>

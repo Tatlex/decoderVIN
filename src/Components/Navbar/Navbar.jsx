@@ -7,8 +7,7 @@ function Navbar() {
     return (
         <div className={classes.NavbarContainer}>
             <NavLink to="/"><img className={classes.image} src={image} alt="Home"/></NavLink>
-
-            <NavLink to="/variables" >Get Vehicle Variables List</NavLink>
+            <NavLink to="/variables" className={classes.linkVVL}>Vehicle Variables List</NavLink>
         </div>
     )
 }
