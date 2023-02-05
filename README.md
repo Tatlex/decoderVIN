@@ -1,6 +1,7 @@
 ***************************************************************************
                                                                          
-*            LINK TO HOST: http://tatlexvindecoder.zzz.com.ua             
+* LINK TO HOST #1: http://tatlexvindecoder.zzz.com.ua  (valid up to 5/2/23 23:16)
+* LINK TO HOST #2: http://u143289.test-handyhost.ru  (you may need a VPN to connect)
                                                                          
 ***************************************************************************
 
