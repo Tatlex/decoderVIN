@@ -23,7 +23,7 @@ function DecoderVIN() {
             `https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/${vin}?format=json`
         );
         const result = await res.json();
-        setMessage(result.Message);
+        setMessage(result.message);
 
         setHistory((current) => [
             {vin, time: new Date()},
@@ -73,7 +73,7 @@ function DecoderVIN() {
                     ))}
                 </ol>
             </div>
-            <div className={classes.GetInfo}>
+            <div className={classes.getInfo}>
         <textarea
             rows="15"
             cols="100"
