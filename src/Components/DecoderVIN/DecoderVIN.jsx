@@ -14,8 +14,8 @@ function DecoderVIN() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        let illegalChar = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-        if (vin.length !== 17 || illegalChar.test(vin)) {
+        let legalChar = /^[a-zA-Z0-9]+$/;
+        if (vin.length !== 17 || !legalChar.test(vin)) {
             setMessage("Invalid input");
             return;
         }
