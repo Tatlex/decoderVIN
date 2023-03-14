@@ -14,7 +14,7 @@ function App() {
             <Navbar/>
             <div>
                 <Routes>
-                    <Route path='/decoderVIN' element={<DecoderVIN/>}/>
+                    <Route path='/' element={<DecoderVIN/>}/>
                     <Route path='/variables' element={<List/>}/>
                     <Route path='/variables/:id' element={<Variable/>}/>
                     <Route path='*' element={<ErrorPage/>}/>
