@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/vindecoder.iml" filepath="$PROJECT_DIR$/.idea/vindecoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/decoderVIN.iml" filepath="$PROJECT_DIR$/.idea/decoderVIN.iml" />
     </modules>
   </component>
 </project>
