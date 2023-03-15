@@ -16,7 +16,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<DecoderVIN/>}/>
                     <Route path='/variables' element={<List/>}/>
-                    <Route path='/variables/:id' element={<Variable/>}/>
+                    <Route path='variables/:id' element={<Variable/>}/>
                     <Route path='*' element={<ErrorPage/>}/>
                 </Routes>
             </div>
