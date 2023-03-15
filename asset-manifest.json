@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/decoderVIN/static/css/main.a4051630.css",
-    "main.js": "/decoderVIN/static/js/main.31c528f4.js",
-    "static/js/787.89091725.chunk.js": "/decoderVIN/static/js/787.89091725.chunk.js",
-    "static/media/banner.png": "/decoderVIN/static/media/banner.109471f56827986653dc.png",
-    "index.html": "/decoderVIN/index.html",
-    "main.a4051630.css.map": "/decoderVIN/static/css/main.a4051630.css.map",
-    "main.31c528f4.js.map": "/decoderVIN/static/js/main.31c528f4.js.map",
-    "787.89091725.chunk.js.map": "/decoderVIN/static/js/787.89091725.chunk.js.map"
+    "main.css": "/static/css/main.a4051630.css",
+    "main.js": "/static/js/main.85df2211.js",
+    "static/js/787.89091725.chunk.js": "/static/js/787.89091725.chunk.js",
+    "static/media/banner.png": "/static/media/banner.109471f56827986653dc.png",
+    "index.html": "/index.html",
+    "main.a4051630.css.map": "/static/css/main.a4051630.css.map",
+    "main.85df2211.js.map": "/static/js/main.85df2211.js.map",
+    "787.89091725.chunk.js.map": "/static/js/787.89091725.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4051630.css",
-    "static/js/main.31c528f4.js"
+    "static/js/main.85df2211.js"
   ]
 }
