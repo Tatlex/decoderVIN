@@ -2,7 +2,7 @@ import React from "react";
 import List from "./Components/List/List";
 import Variable from "./Components/Variable/Variable";
 import DecoderVIN from "./Components/DecoderVIN/DecoderVIN";
-import {HashRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
 import Navbar from "./Components/Navbar/Navbar";
 import ErrorPage from "./Components/ErrorPage/ErrorPage";
@@ -10,7 +10,7 @@ import ErrorPage from "./Components/ErrorPage/ErrorPage";
 
 function App() {
     return (
-        <HashRouter>
+        <BrowserRouter>
             <Navbar/>
             <div>
                 <Routes>
@@ -20,7 +20,7 @@ function App() {
                     <Route path='*' element={<ErrorPage/>}/>
                 </Routes>
             </div>
-        </HashRouter>
+        </BrowserRouter>
     );
 }
 
