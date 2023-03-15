@@ -19,7 +19,7 @@ function VariablesList() {
         {variables.map((variable) => (
           <li key={variable.ID}>
             <h3>
-              <Link style={{ color: "black" }} to={`/decoderVIN/variables/${variable.ID}`}>{variable.Name}</Link>
+              <Link style={{ color: "black" }} to={`/variables/${variable.ID}`}>{variable.Name}</Link>
             </h3>
             <p dangerouslySetInnerHTML={{ __html: variable.Description }}></p>
           </li>
