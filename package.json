@@ -1,6 +1,6 @@
 {
   "name": "decoderVIN",
-  "homepage": "http://tatlex.github.io/decoderVIN/",
+  "homepage": "http://tatlex.github.io/decoderVIN",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
