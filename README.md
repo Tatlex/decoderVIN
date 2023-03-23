@@ -21,8 +21,7 @@ and then you can compile the project. Then all will works correctly.
 ***************************************************************************
 
 ## About this project:
-1. This project allow you get the detailed information about your vehicle using your VIN code;
-For decryption was used nhtsa [API](https://vpic.nhtsa.dot.gov/api/)
+1. This project allow you get the detailed information about your vehicle using your VIN code. (For decryption was used nhtsa [API](https://vpic.nhtsa.dot.gov/api/));
 2. Search history can be tracked (up to 5 queries);
 3. For the correct search, validation was used to help the user for normal decoding process;
 4. You can view more detailed information about your vehicle on the *Vehicle Variable List* page.;
