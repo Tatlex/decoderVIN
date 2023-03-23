@@ -7,7 +7,7 @@
                                                                          
 ***************************************************************************
 
-##### Attention!!!
+## Attention!!!
 
 Due to the fact that GitHub Pages works with static websites, there is an issue with `ReactRouter` and the broken URL-bar.
 If you will use GitHub Pages link, the project will loaded from *404 Error Page*. You need to click on *Return to home page* button
@@ -20,7 +20,7 @@ and then you can compile the project. Then all will works correctly.
 
 ***************************************************************************
 
-##### About this project:
+## About this project:
 1. This project allow you get the detailed information about your vehicle using your VIN code;
 For decryption was used nhtsa [API](https://vpic.nhtsa.dot.gov/api/)
 2. Search history can be tracked (up to 5 queries);
