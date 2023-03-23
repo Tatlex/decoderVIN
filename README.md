@@ -1,10 +1,34 @@
 ***************************************************************************
-                                                                         
+
+* Link to GitHub Pages : [DecoderVIN](https://tatlex.github.io/decoderVIN/)  (always valid)
+
 * LINK TO HOST #1: http://tatlexvindecoder.zzz.com.ua  (valid up to 5/2/23 23:16)
-* LINK TO HOST #2: http://u143289.test-handyhost.ru  (you may need a VPN to connect)
+* LINK TO HOST #2: http://u143289.test-handyhost.ru  (Not valid)
                                                                          
 ***************************************************************************
 
+#####Attention!!!
+
+Due to the fact that GitHub Pages works with static websites, there is an issue with *ReactRouter* and the broken URL-bar.
+If you will use GitHub Pages link, the project will loaded from *404 Error Page*. You need to click on *Return to home page* button
+and all will be work.
+
+If you want to clone this github repo and compile the project, before compiling in package.json remove the third line 
+                                    *"homepage": "http://tatlex.github.io/decoderVIN",*,
+and then you can compile the project. Then all will works correctly.
+
+
+***************************************************************************
+
+#####About this project:
+1. This project allow you get the detailed information about your vehicle using your VIN code;
+For decryption was used nhtsa [API](https://vpic.nhtsa.dot.gov/api/)
+2. Search history can be tracked (up to 5 queries);
+3. For the correct search, validation was used to help the user for normal decoding process;
+4. You can view more detailed information about your vehicle on the *Vehicle Variable List* page.;
+5. If you try to find a page that doesn't exist, you will see a *404 error page* from where you can return to the *Home Page*;
+
+***************************************************************************
 
 # Getting Started with Create React App
 
